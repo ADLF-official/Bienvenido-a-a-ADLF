@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impulsa tu Salón - ALDF</title>
   <style>
+    /* Tus estilos actuales (colores, fuentes, etc.) */
     body {
       margin: 0;
       padding: 0;
@@ -31,9 +32,6 @@
       font-size: 1rem;
       color: #ccc;
     }
-    .form-container {
-      margin-top: 20px;
-    }
     .form-container input {
       width: 90%;
       padding: 10px;
@@ -52,43 +50,7 @@
       cursor: pointer;
       width: 90%;
     }
-    .benefits {
-      margin-top: 40px;
-    }
-    .benefits h2 {
-      font-size: 1.8rem;
-    }
-    .benefits ul {
-      list-style: none;
-      padding: 0;
-    }
-    .benefits li {
-      font-size: 1rem;
-      margin: 10px 0;
-    }
-    .testimonials {
-      margin-top: 40px;
-    }
-    .testimonials h2 {
-      font-size: 1.8rem;
-    }
-    .testimonials img {
-      width: 90%;
-      border-radius: 10px;
-    }
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      background-color: #333;
-      border-radius: 10px;
-    }
-    footer p {
-      font-size: 0.9rem;
-      color: #ccc;
-    }
-    .required {
-      color: #FF0000;
-    }
+    /* Más estilos... */
   </style>
 </head>
 <body>
@@ -98,9 +60,11 @@
       <h1>Impulsa tu Salón</h1>
       <p>Descubre los 9 Mandamientos para un Negocio Rentable y Autogestionado</p>
       <div class="form-container">
-        <input type="text" placeholder="Nombre *" required>
-        <input type="text" placeholder="Número de celular *" required>
-        <button>¡Quiero mi Guía Gratis!</button>
+        <form id="contactForm">
+          <input type="text" id="nombre" placeholder="Nombre *" required>
+          <input type="text" id="telefono" placeholder="Número de celular *" required>
+          <button type="submit">¡Quiero mi Guía Gratis!</button>
+        </form>
       </div>
     </header>
 
@@ -122,8 +86,31 @@
 
     <!-- Pie de página -->
     <footer>
-      <p>© 2025 ADLF. Todos los derechos reservados.</p>
+      <p>© 2025 ALDF. Todos los derechos reservados.</p>
     </footer>
   </div>
+
+  <!-- Script para enviar datos a Zapier -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      const telefono = document.getElementById('telefono').value;
+      const webhookUrl = 'URL_DEL_WEBHOOK_DE_ZAPIER'; // Reemplaza con tu URL de Zapier
+
+      fetch(webhookUrl, {
+        method: 'POST',
+        body: JSON.stringify({ nombre, telefono }),
+        headers: { 'Content-Type': 'application/json' }
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert('¡Gracias! Pronto recibirás tu guía.');
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    });
+  </script>
 </body>
 </html>
