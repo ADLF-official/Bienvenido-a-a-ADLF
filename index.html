@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impulsa tu Salón - ALDF</title>
+    <title>Impulsa tu Salón - ADLF</title>
     <style>
         body {
             margin: 0;
@@ -113,26 +113,26 @@
         <!-- Testimonios -->
         <section class="testimonials">
             <h2>Ellos empezaron de cero… ¡y ahora son íconos de la belleza!</h2>
-            <img src="https://www.firm-guide.com/wp-content/uploads/2021/07/beauty-salon-4043096_1920.jpg" alt="Salón de belleza exitoso">
+            <img src="https://www.procon-management.de/fileadmin/_processed_/b/3/csm_Haarrock_by_Helga__5__c6f9753cd3.jpg" alt="Salón de belleza exitoso">
         </section>
 
         <!-- Pie de página -->
         <footer>
-            <p>© 2025 ALDF. Todos los derechos reservados.</p>
+            <p>© 2025 ADLF. Todos los derechos reservados.</p>
         </footer>
     </div>
 
     <script>
-        const botToken = 7609445234:AAHaIOs_atVGpS9dfD5VPpv5ohxW0dduMhQ; // Reemplázalo con tu token real
-        const chatId = 929759981,; // Reemplázalo con tu ID de chat real
-
         document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            const nombre = document.getElementById('nombre').value;
-            const telefono = document.getElementById('telefono').value;
+            const botToken = '7609445234:AAHaIOs_atVGpS9dfD5VPpv5ohxW0dduMhQ';
+            const chatId = '929759981';
 
-            if (nombre.trim() === "" || telefono.trim() === "") {
+            const nombre = document.getElementById('nombre').value.trim();
+            const telefono = document.getElementById('telefono').value.trim();
+
+            if (nombre === "" || telefono === "") {
                 alert("Por favor, completa todos los campos.");
                 return;
             }
@@ -154,7 +154,10 @@
                     console.error(data);
                 }
             })
-            .catch(error => console.error('Error:', error));
+            .catch(error => {
+                alert('Error en la conexión. Intenta nuevamente.');
+                console.error('Error:', error);
+            });
         });
     </script>
 </body>
