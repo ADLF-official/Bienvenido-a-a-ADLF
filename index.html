@@ -1,116 +1,161 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impulsa tu Salón - ALDF</title>
-  <style>
-    /* Tus estilos actuales (colores, fuentes, etc.) */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #000;
-      color: #fff;
-    }
-    .container {
-      max-width: 100%;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
-    header {
-      background: linear-gradient(to bottom, #000, #8B0000);
-      padding: 40px 20px;
-      border-radius: 10px;
-    }
-    header h1 {
-      font-size: 2rem;
-      margin: 0;
-    }
-    header p {
-      font-size: 1rem;
-      color: #ccc;
-    }
-    .form-container input {
-      width: 90%;
-      padding: 10px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
-    .form-container button {
-      background-color: #FF0000;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-      width: 90%;
-    }
-    /* Más estilos... */
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impulsa tu Salón - ALDF</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        header {
+            background: linear-gradient(to bottom, #000, #8B0000);
+            padding: 40px 20px;
+            border-radius: 10px;
+        }
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+        header p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+        .form-container input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .form-container button {
+            background-color: #FF0000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 90%;
+        }
+        .benefits {
+            margin-top: 40px;
+        }
+        .benefits h2 {
+            font-size: 1.8rem;
+        }
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+        .benefits li {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+        .testimonials {
+            margin-top: 40px;
+        }
+        .testimonials h2 {
+            font-size: 1.8rem;
+        }
+        .testimonials img {
+            width: 90%;
+            border-radius: 10px;
+        }
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+        }
+        footer p {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Encabezado -->
-    <header>
-      <h1>Impulsa tu Salón</h1>
-      <p>Descubre los 9 Mandamientos para un Negocio Rentable y Autogestionado</p>
-      <div class="form-container">
-        <form id="contactForm">
-          <input type="text" id="nombre" placeholder="Nombre *" required>
-          <input type="text" id="telefono" placeholder="Número de celular *" required>
-          <button type="submit">¡Quiero mi Guía Gratis!</button>
-        </form>
-      </div>
-    </header>
+    <div class="container">
+        <!-- Encabezado -->
+        <header>
+            <h1>Impulsa tu Salón</h1>
+            <p>Descubre los 9 Mandamientos para un Negocio Rentable y Autogestionado</p>
+            <div class="form-container">
+                <form id="contactForm">
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre *" required>
+                    <input type="text" id="telefono" name="telefono" placeholder="Número de celular *" required>
+                    <button type="submit">¡Quiero mi Guía Gratis!</button>
+                </form>
+            </div>
+        </header>
 
-    <!-- Beneficios -->
-    <section class="benefits">
-      <h2>¿Qué encontrarás en esta guía?</h2>
-      <ul>
-        <li>Aprende a delegar tareas y recupera horas de tu día.</li>
-        <li>Descubre cómo fidelizar clientes y aumentar tus ingresos recurrentes.</li>
-        <li>Convierte tu salón en un negocio escalable y autogestionado.</li>
-      </ul>
-    </section>
+        <!-- Beneficios -->
+        <section class="benefits">
+            <h2>¿Qué encontrarás en esta guía?</h2>
+            <ul>
+                <li>Aprende a delegar tareas y recupera horas de tu día.</li>
+                <li>Descubre cómo fidelizar clientes y aumentar tus ingresos recurrentes.</li>
+                <li>Convierte tu salón en un negocio escalable y autogestionado.</li>
+            </ul>
+        </section>
 
-    <!-- Testimonios -->
-    <section class="testimonials">
-      <h2>Ellos empezaron de cero… ¡y ahora son íconos de la belleza!</h2>
-      <img src="https://th.bing.com/th/id/OIP.EIL__XwkyyizRXOaXxwNQQHaEE?w=281&h=180&c=7&r=0&o=5&pid=1.7" alt="Salón de belleza exitoso">
-    </section>
+        <!-- Testimonios -->
+        <section class="testimonials">
+            <h2>Ellos empezaron de cero… ¡y ahora son íconos de la belleza!</h2>
+            <img src="https://www.firm-guide.com/wp-content/uploads/2021/07/beauty-salon-4043096_1920.jpg" alt="Salón de belleza exitoso">
+        </section>
 
-    <!-- Pie de página -->
-    <footer>
-      <p>© 2025 ALDF. Todos los derechos reservados.</p>
-    </footer>
-  </div>
+        <!-- Pie de página -->
+        <footer>
+            <p>© 2025 ALDF. Todos los derechos reservados.</p>
+        </footer>
+    </div>
 
-  <!-- Script para enviar datos a Zapier -->
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const nombre = document.getElementById('nombre').value;
-      const telefono = document.getElementById('telefono').value;
-      const webhookUrl = 'https://drive.google.com/uc?export=download&id=1VPs_nDKSQASgtr-SqVmM_VpE0q_MuW1N'; // Reemplaza con tu URL de Zapier
+    <script>
+        const botToken = 7609445234:AAHaIOs_atVGpS9dfD5VPpv5ohxW0dduMhQ; // Reemplázalo con tu token real
+        const chatId = 929759981,; // Reemplázalo con tu ID de chat real
 
-      fetch(webhookUrl, {
-        method: 'POST',
-        body: JSON.stringify({ nombre, telefono }),
-        headers: { 'Content-Type': 'application/json' }
-      })
-      .then(response => response.json())
-      .then(data => {
-        alert('¡Gracias! Pronto recibirás tu guía.');
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-    });
-  </script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nombre = document.getElementById('nombre').value;
+            const telefono = document.getElementById('telefono').value;
+
+            if (nombre.trim() === "" || telefono.trim() === "") {
+                alert("Por favor, completa todos los campos.");
+                return;
+            }
+
+            const message = `📩 Nueva solicitud de guía gratuita\n👤 Nombre: ${nombre}\n📞 Teléfono: ${telefono}`;
+
+            fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ chat_id: chatId, text: message })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    alert('Información enviada con éxito. Descargando la guía...');
+                    window.location.href = 'https://drive.google.com/uc?export=download&id=1VPs_nDKSQASgtr-SqVmM_VpE0q_MuW1N';
+                } else {
+                    alert('Error al enviar la información.');
+                    console.error(data);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
 </body>
 </html>
